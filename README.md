@@ -1,0 +1,2 @@
+# Hivemind
+Decentralized Entertainment DAO
