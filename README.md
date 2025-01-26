@@ -1,2 +1,2 @@
-# Hivemind
+# Aurora
 Decentralized Entertainment DAO
