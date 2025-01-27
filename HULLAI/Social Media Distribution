@@ -1,0 +1,13 @@
+import tweepy
+
+class SocialDistributor:
+    def __init__(self):
+        self.twitter_auth = tweepy.OAuth1UserHandler(
+            "API_KEY", "API_SECRET",
+            "ACCESS_TOKEN", "ACCESS_SECRET"
+        )
+    
+    def post_to_twitter(self, text, video_path):
+        api = tweepy.API(self.twitter_auth)
+        media = api.media_upload(video_path)
+        api.update_status(text, media_ids=[media
