@@ -103,8 +103,6 @@ graph TD
 
 
 
-Cinematography NFT Agent (HULLAI) 
-
 **1. Core Infrastructure
  Setup (Week 1-2)**
 - Task: Blockchain Network Integration
