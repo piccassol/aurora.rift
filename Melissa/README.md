@@ -5,19 +5,19 @@
 
 This  is  Melissa...  Your speech capable,  continuously  listening,   and virtually visual personal assistant for managing the aurora.rift ecosystem  and  the  metaverse  at  large.(The multi-model AI creation system with blockchain integration and social distribution.)
 
-🎤 Voice-controlled interface (togglable)
-🎧 Continuous Audio Conversation (togglable)
-💻 Long Form Memory Capacity
-🕣 Multi Conversation Memory
-💭 Reinforced Deep Learning to adapt to user personality
-👁️ Augmented/Virtual avatar with visibility (togglable)
-🧮 Problem Solving and General Troubleshooting assistance
-🧠 Complex  NLP    processing  Model with  Voice  and  Chat  UI/UX  
-🎥 AI Video Generation help
-🖼️ AI Image Generation help
-🎵 AI Music Composition help
-🔗 Solana NFT Minting help
-📱 Social Media Automation help
+- 🎤 Voice-controlled interface (togglable)
+- 🎧 Continuous Audio Conversation (togglable)
+- 💻 Long Form Memory Capacity
+- 🕣 Multi Conversation Memory
+- 💭 Reinforced Deep Learning to adapt to user personality
+- 👁️ Augmented/Virtual avatar with visibility (togglable)
+- 🧮 Problem Solving and General Troubleshooting assistance
+- 🧠 Complex  NLP    processing  Model with  Voice  and  Chat  UI/UX  
+- 🎥 AI Video Generation help
+- 🖼️ AI Image Generation help
+- 🎵 AI Music Composition help
+- 🔗 Solana NFT Minting help
+- 📱 Social Media Automation help
 
 Melissa  will  be  your "Siri"  in  the  aurora.rift  virtual  &  augmented  environment.  
 
