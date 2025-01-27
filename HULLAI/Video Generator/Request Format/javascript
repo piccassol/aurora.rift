@@ -1,0 +1,8 @@
+POST /v1/videos/generate
+
+{
+  "prompt": "A serene ocean wave rolling onto a beach at sunset",
+  "duration": 10,
+  "resolution": "1920x1080",
+  "fps": 30
+}
