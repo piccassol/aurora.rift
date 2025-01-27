@@ -1,0 +1,22 @@
+// Anchor framework for Solana
+use anchor_lang::prelude::*;
+
+#[program]
+pub mod video_minter {
+    use super::*;
+
+    pub fn mint_video_nft(ctx: Context<MintVideoNFT>, ipfs_hash: String) -> Result<()> {
+        let video_account = &mut ctx.accounts.video_account;
+        video_account.owner = *ctx.accounts.owner.key;
+        video_account.ipfs_hash = ipfs_hash;
+        video_account.timestamp = Clock::get()?.unix_timestamp;
+        Ok(())
+    }
+}
+
+#[account]
+pub struct VideoNFT {
+    pub owner: Pubkey,
+    pub ipfs_hash: String,
+    pub timestamp: i64,
+}
