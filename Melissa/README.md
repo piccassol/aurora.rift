@@ -3,8 +3,7 @@
 ![image](https://github.com/user-attachments/assets/acdc234d-ffa4-4e18-b234-74832f1df95f)
 
 
-This  is  Melissa...  Your speech capable, and virtually visual personal assistant for managing the aurora.rift ecosystem.(The multi-model AI creation system with blockchain integration and social distribution.)
-Features
+This  is  Melissa...  Your speech capable,  continuously  listening,   and virtually visual personal assistant for managing the aurora.rift ecosystem  and  the  metaverse  at  large.(The multi-model AI creation system with blockchain integration and social distribution.)
 
 🎤 Voice-controlled interface (togglable)
 🎧 Continuous Audio Conversation (togglable)
