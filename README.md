@@ -8,7 +8,7 @@ Aurorarift is Multi Agent System designed to automate creative workflow and outp
 /accelerate
 
 
-AuroraRift is a decentralized framework and platform built on the Solana blockchain, focused on the creation and management of Music, Vidoe, and Picture NFTs. The project aims to offer artists a seamless, secure, and efficient way to mint, distribute, and monetize their creations through NFTs, while also integrating with popular streaming & media services and social media platforms for promotion. Key features include:
+AuroraRift is a decentralized framework and platform built on the Solana blockchain, focused on the creation and management of Music, Video, and Picture NFTs. The project aims to offer artists a seamless, secure, and efficient way to mint, distribute, and monetize their creations through NFTs, while also integrating with popular streaming & media services and social media platforms for promotion. Key features include:
 	1.	Multi-Chain Support: Initially focused on Solana, with potential future integration of additional blockchains.
 	2.	NFT Minting and Royalty Management: Smart contracts enforce royalties (via EIP-2981) and enable decentralized art ownership. Metadata for each NFT is hosted on IPFS to ensure permanence and access.
 	3.	Streaming and Media Service Integration: Connects with popular platforms (Spotify, Apple Music, SoundCloud, Youtube, Tiktok, Instagram, Meta, Magic Eden, X,  Exchange.art) to streamline the integration of creative content with NFT ownership.
