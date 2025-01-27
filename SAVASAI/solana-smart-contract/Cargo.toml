@@ -1,0 +1,9 @@
+[package]
+name = "nft_minting"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anchor-lang = "0.24.2"
+anchor-spl = "0.24.2"
+mpl-token-metadata = "1.2.5"
