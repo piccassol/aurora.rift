@@ -1,0 +1,27 @@
+invoke(
+    &mpl_token_metadata::instruction::create_metadata_accounts_v3(
+        mpl_token_metadata::id(),
+        ctx.accounts.metadata.key(),
+        ctx.accounts.mint.key(),
+        ctx.accounts.mint_authority.key(),
+        ctx.accounts.payer.key(),
+        ctx.accounts.payer.key(),
+        name,
+        symbol,
+        metadata_uri,
+        None,
+        500, // Royalty in basis points (e.g., 500 = 5%)
+        true,
+        true,
+        None,
+        None,
+    ),
+    &[
+        ctx.accounts.metadata.to_account_info(),
+        ctx.accounts.mint.to_account_info(),
+        ctx.accounts.mint_authority.to_account_info(),
+        ctx.accounts.payer.to_account_info(),
+        ctx.accounts.system_program.to_account_info(),
+        ctx.accounts.rent.to_account_info(),
+    ],
+)?;
