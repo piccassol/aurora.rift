@@ -1,0 +1,13 @@
+Deploy using Anchor:
+
+# Build the program
+anchor build
+
+# Deploy to Devnet
+anchor deploy --provider.cluster devnet
+
+# Deploy to Testnet
+anchor deploy --provider.cluster testnet
+
+# Deploy to Mainnet (after testing thoroughly)
+anchor deploy --provider.cluster mainnet
