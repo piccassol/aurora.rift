@@ -1,4 +1,4 @@
-# Melissa AI Assistant
+# Melissa AIR1 Virtual Assistant
 
 ![image](https://github.com/user-attachments/assets/acdc234d-ffa4-4e18-b234-74832f1df95f)
 
