@@ -1,18 +1,23 @@
 # Melissa AI Assistant
 
-A multi-modal AI creation system with blockchain integration and social distribution.
+Your personal assistant to managing the aurorrift ecosystem.(The multi-modal AI creation system with blockchain integration and social distribution.)
 
 ## Features
 - 🎤 Voice-controlled interface
-- 🎥 AI Video Generation
-- 🖼️ AI Image Generation
-- 🎵 AI Music Composition
-- 🔗 Solana NFT Minting
-- 📱 Social Media Automation
+- 💻 Long Form Memory Capacity
+- 🕣 Multi Conversation Memory
+- 💭 Reinforced Deep Learning to adapt to user personslity
+- 👁️ Augmemted/Virtual avatar with toggable visibilty  
+- 🧮 Problem Solving and General Troubleshooting assistance
+- 🎥 AI Video Generation help
+- 🖼️ AI Image Generation help
+- 🎵 AI Music Composition help
+- 🔗 Solana NFT Minting help
+- 📱 Social Media Automation help
 
 ## Quick Start
 ```bash
-git clone https://github.com/yourusername/main-repo.git
+git clone https://github.com/piccassol/aurora.rift/tree/main/Melisa
 cd Melissa
 pip install -r requirements.txt
 
