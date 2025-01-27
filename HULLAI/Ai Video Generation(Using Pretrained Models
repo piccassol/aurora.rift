@@ -1,0 +1,17 @@
+# Requires: torch, transformers, diffusers
+import replicate
+import requests
+from IPFS_API import upload_to_ipfs  # Custom IPFS integration
+
+class VideoGenerator:
+    def __init__(self):
+        self.model = "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b"
+    
+    def generate_video(self, prompt):
+        output = replicate.run(
+            self.model,
+            input={"prompt": prompt, "num_frames": 24}
+        )
+        video_url = output[0]
+        video_ipfs_hash = upload_to_ipfs(video_url)
+        return video_ipfs_hash
