@@ -1,2 +1,2 @@
 # aurorarift
-use ai to find your Northen Light †
+use ai to find your creative Northen Light †
