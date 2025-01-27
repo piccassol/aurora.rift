@@ -1,0 +1,21 @@
+AI Art Generator
+
+Navigate to ai-art-generator/ and run:
+pip install -r requirements.txt
+python art_generator.py
+Solana Smart Contract:
+
+Navigate to solana-smart-contract/ and run:
+cargo build-bpf
+solana program deploy target/deploy/nft_minting.so
+Backend API:
+
+Navigate to backend-api/ and run:
+npm install
+node server.js
+User Interface:
+
+Navigate to user-interface/ and run:
+npm install
+npm start
+This fully functioning code and project structure will allow you to run the application effortlessly.
