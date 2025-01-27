@@ -1,2 +1,2 @@
-# Aurora
+# aurorarift
 Decentralized Entertainment DAO
