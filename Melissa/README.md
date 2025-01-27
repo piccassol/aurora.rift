@@ -1,13 +1,14 @@
 # Melissa AI Assistant
 
-Your personal assistant to managing the aurorrift ecosystem.(The multi-modal AI creation system with blockchain integration and social distribution.)
+Your speech capable, and virtually visual personal assistant for managing the Aurorarift ecosystem.(The multi-modal AI creation system with blockchain integration and social distribution.)
 
 ## Features
-- 🎤 Voice-controlled interface
+- 🎤 Voice-controlled interface (toggable)
+- 🎧 Continuos Audio Conversation (toggable)
 - 💻 Long Form Memory Capacity
 - 🕣 Multi Conversation Memory
 - 💭 Reinforced Deep Learning to adapt to user personslity
-- 👁️ Augmemted/Virtual avatar with toggable visibilty  
+- 👁️ Augmemted/Virtual avatar with visibilty (toggable)   
 - 🧮 Problem Solving and General Troubleshooting assistance
 - 🎥 AI Video Generation help
 - 🖼️ AI Image Generation help
