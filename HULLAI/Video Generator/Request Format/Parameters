@@ -1,0 +1,4 @@
+prompt - Text description of the video
+duration - Video length in seconds (1-60)
+resolution - Video resolution (720p, 1080p, 4K)
+fps - Frames per second (24, 30, 60)
