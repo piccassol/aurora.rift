@@ -1,9 +1,10 @@
 /aurorarift
-Here's a structured project plan addressing the requirements and technical considerations:
 
-/Project Plan:
 
 Aurorarift is Multi Agent System designed to automate creative workflow and output. The system is comprised of a series of Agents designed to help you create and then showcase your creations to the world with complete ease. 
+
+Here's a structured project plan addressing the requirements and technical considerations:
+
 
 Music NFT Agent (MICHÉLAI) 
 
