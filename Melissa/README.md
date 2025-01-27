@@ -1,5 +1,8 @@
 # Melissa AI Assistant
 
+![image](https://github.com/user-attachments/assets/acdc234d-ffa4-4e18-b234-74832f1df95f)
+
+
 Your speech capable, and virtually visual personal assistant for managing the Aurorarift ecosystem.(The multi-modal AI creation system with blockchain integration and social distribution.)
 
 ## Features
