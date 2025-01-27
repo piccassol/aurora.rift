@@ -1,0 +1,28 @@
+• Make sure the avatar is set to active in Unity's scene for visibility.
+• Adjust visibility based on your VR/AR interaction models.
+
+### **5. `docs/WEB-AR.md`**
+
+```markdown
+# Web AR Integration Documentation
+
+This section explains the integration of Melissa into a web-based AR environment using `<model-viewer>`.
+
+## Steps to Set Up:
+1. Open `web-ar/index.html` in any modern browser (Chrome or Firefox recommended).
+2. Make sure the 3D model file `melissa-avatar.glb` is in the directory.
+3. Use the **"Toggle Visibility"** button to toggle Melissa's visibility.
+
+## How It Works:
+- **`<model-viewer>`**: A web component that allows the viewing of 3D models directly in the browser. 
+- The **toggle visibility** functionality is implemented with JavaScript, listening for the button click and hiding or showing the avatar.
+
+### JavaScript Logic:
+```javascript
+const toggleBtn = document.getElementById('toggle-btn');
+const modelViewer = document.querySelector('model-viewer');
+
+toggleBtn.addEventListener('click', () => {
+    const isVisible = modelViewer.style.display !== 'none';
+    modelViewer.style.display = isVisible ? 'none' : 'block';
+});
