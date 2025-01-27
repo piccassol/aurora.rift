@@ -1,2 +1,2 @@
 # aurorarift
-Decentralized Entertainment DAO
+use ai to find your Northen Light †
