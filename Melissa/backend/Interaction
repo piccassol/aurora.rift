@@ -1,0 +1,12 @@
+import deepseek  # Assuming 'deepseek' as the AI API
+
+# Deepseek API Key
+deepseek.api_key = 'your_deepseek_api_key'
+
+def generate_intelligent_response(prompt):
+    response = deepseek.Completion.create(
+        engine="text-davinci-003",  # Use the suitable model
+        prompt=prompt,
+        max_tokens=150
+    )
+    return response.choices[0].text.strip()
