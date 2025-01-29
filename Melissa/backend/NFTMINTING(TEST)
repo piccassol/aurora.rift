@@ -1,0 +1,8 @@
+from solana.rpc.api import Client
+
+# Connect to testnet
+client = Client("https://api.testnet.solana.com")
+
+def mint_nft(metadata_uri):
+    # Interact with Solana smart contract for NFT minting
+    pass
