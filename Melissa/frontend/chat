@@ -1,0 +1,29 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+const MelissaAI = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-600 to-indigo-900 text-white p-4">
+      <motion.h1 
+        className="text-4xl font-bold mb-6" 
+        initial={{ opacity: 0, y: -20 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.5 }}
+      >
+        Melissa AI
+      </motion.h1>
+      <Card className="w-full max-w-md p-6 bg-white text-black rounded-2xl shadow-lg">
+        <CardContent>
+          <p className="text-lg mb-4 text-center">Ask Melissa anything about Music NFTs!</p>
+          <Input placeholder="Type your question..." className="mb-4" />
+          <Button className="w-full bg-purple-600 hover:bg-purple-700">Ask Melissa</Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default MelissaAI;
