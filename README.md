@@ -2,7 +2,7 @@
 
 
 
-Aurorarift is Multi Agent System designed to automate creative workflow and output. The system is comprised of a series of Agents designed to help you create and then showcase your creations to the world with complete ease. 
+Aurorarift۞ is Multi Agent System designed to automate creative workflow and output. The system is comprised of a series of Agents designed to help you create and then showcase your creations to the world with complete ease. 
 
 
 
