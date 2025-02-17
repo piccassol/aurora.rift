@@ -22,7 +22,7 @@ AuroraRift is a **next-generation multi-agent system** designed to **automate cr
   - Provides **real-time market analysis & trading calls**  
   - **Integrates with Dexscreener, AssetDash, and top traders on X**  
 
-### **🎙️ AI Assistant**  
+### **🎙️ AGI Virtual/Agumented Assistant**  
 - **MelissaAIR1** – A **superintelligent, multimodal AGI assistant** designed to:  
   - **Understand voice, text, and visual inputs**
   - **Constantly listening and is wake-word activated for continous, looped deep learning help & troubleshooting**
