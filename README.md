@@ -139,8 +139,8 @@ solana program show --program-id <your_program_id>
 
 ## **🛠️ Join the Community**  
 
-💬 **Discord** – [[Join here](https://discord.gg/8r7afma9)]  
-📢 **Twitter/X** – [[@aurorariftlab](https://x.com/aurorariftlabs?s=21)s]  
+💬 **Discord** – [[Join the community! :)](https://discord.gg/8r7afma9)]  
+📢 **Twitter/X** – [[@aurorariftlabs](https://x.com/aurorariftlabs?s=21)]  
 
 
 AuroraRift is more than just a platform—it’s a movement. **/findyourcreativenorthenlight †.** ✨  
