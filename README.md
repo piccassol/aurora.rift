@@ -7,7 +7,7 @@ Aurorarift ۞ is Multi Agent System designed to automate creative workflow and o
 
 ---
 
-# **/aurorarift ۞: Your AI-Powered Creative & Trading Ecosystem**  
+# **AuroraRift ۞: Your AI-Powered Creative & Trading Ecosystem**  
 
 
 AuroraRift is a **next-generation multi-agent system** designed to **automate creativity, trading, and digital asset management**. Built on **Solana**, AuroraRift seamlessly integrates **AI-powered music, video, and image generation** with **NFT minting, distribution, and monetization**, while also introducing **NolandAI**—a super-intelligent trading agent—and **MelissaAIR1**, an AGI multimodal voice assistant that brings an advanced interactive layer to the ecosystem.  
