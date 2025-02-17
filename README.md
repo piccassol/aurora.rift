@@ -24,8 +24,10 @@ AuroraRift is a **next-generation multi-agent system** designed to **automate cr
 
 ### **🎙️ AI Assistant**  
 - **MelissaAIR1** – A **superintelligent, multimodal AGI assistant** designed to:  
-  - **Understand voice, text, and visual inputs**  
-  - **Navigate & interact within AuroraRift’s environment**  
+  - **Understand voice, text, and visual inputs**
+  - **Constantly listening and is wake-word activated for continous, looped deep learning help & troubleshooting**
+  - **Virtual & Augmented avatar embodiment to support headset required visual representation of your assistant**
+  - **Navigate & interact within AuroraRift’s environment as well as API Node support to execute tasks on Web2 & Web3 for you**  
   - **Manage creative workflows, NFT minting, and trading actions**  
   - **Engage in real-time conversations like a virtual AI companion**  
 
