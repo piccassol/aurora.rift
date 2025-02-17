@@ -81,19 +81,6 @@ cd backend
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### **3️⃣ Start the Frontend (Next.js on Vercel)**  
-
-```bash
-cd frontend
-npm run dev
-```
-
-### **4️⃣ Deploy to Vercel (for production)**  
-
-```bash
-vercel deploy
-```
-
 ---
 
 ## **🛠️ Smart Contract Deployment**  
@@ -150,9 +137,9 @@ solana program show --program-id <your_program_id>
 
 ## **🛠️ Join the Community**  
 
-💬 **Discord** – [Join here]  
-📢 **Twitter/X** – [@aurorariftlabs]  
-📰 **Newsletter** – [Subscribe here]  
+💬 **Discord** – [[Join here](https://discord.gg/8r7afma9)]  
+📢 **Twitter/X** – [[@aurorariftlab](https://x.com/aurorariftlabs?s=21)s]  
+
 
 AuroraRift is more than just a platform—it’s a movement. **/findyourcreativenorthenlight †.** ✨  
 
