@@ -1,5 +1,4 @@
 import OpenAI from "openai";
-import { OpenAIStream, StreamingTextResponse } from "ai";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -8,6 +7,27 @@ export const maxDuration = 30;
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Custom stream-to-text transformer
+function createTextStream(response) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    async start(controller) {
+      try {
+        for await (const chunk of response) {
+          const content = chunk.choices[0]?.delta?.content || "";
+          if (content) {
+            controller.enqueue(encoder.encode(content));
+          }
+        }
+        controller.close();
+      } catch (error) {
+        controller.error(error);
+      }
+    },
+  });
+  return stream;
+}
 
 export async function POST(req) {
   try {
@@ -37,14 +57,13 @@ export async function POST(req) {
       max_tokens: 1000,
     });
 
-    console.log("Raw OpenAI response:", response); // Log raw response
+    // Convert the OpenAI stream to a text stream
+    const textStream = createTextStream(response);
 
-    const stream = OpenAIStream(response, {
-      onChunk: (chunk) => console.log("Stream chunk:", chunk), // Log each chunk
-      onError: (error) => console.error("Stream error:", error),
+    // Return the stream as a Response object
+    return new Response(textStream, {
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
-
-    return new StreamingTextResponse(stream);
   } catch (error) {
     console.error("OpenAI API error:", error);
     const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
