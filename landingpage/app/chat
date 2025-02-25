@@ -1,0 +1,53 @@
+import OpenAI from "openai";
+import { OpenAIStream, StreamingTextResponse } from "ai";
+import { NextResponse } from "next/server";
+
+export const runtime = "nodejs";
+export const maxDuration = 30;
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+export async function POST(req) {
+  try {
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: "OpenAI API key is not configured" }, { status: 500 });
+    }
+
+    const { messages, systemMessage } = await req.json();
+
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return NextResponse.json({ error: "Invalid messages format" }, { status: 400 });
+    }
+
+    const apiMessages = [
+      { role: "system", content: systemMessage },
+      ...messages.map((message) => ({
+        content: message.content,
+        role: message.role,
+      })),
+    ];
+
+    const response = await openai.chat.completions.create({
+      model: "gpt-4-turbo-preview",
+      stream: true,
+      messages: apiMessages,
+      temperature: 0.7,
+      max_tokens: 1000,
+    });
+
+    console.log("Raw OpenAI response:", response); // Log raw response
+
+    const stream = OpenAIStream(response, {
+      onChunk: (chunk) => console.log("Stream chunk:", chunk), // Log each chunk
+      onError: (error) => console.error("Stream error:", error),
+    });
+
+    return new StreamingTextResponse(stream);
+  } catch (error) {
+    console.error("OpenAI API error:", error);
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+    return NextResponse.json({ error: `Failed to get response from OpenAI: ${errorMessage}` }, { status: 500 });
+  }
+}
