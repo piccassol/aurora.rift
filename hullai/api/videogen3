@@ -1,0 +1,9 @@
+async function generateVideo(prompt, duration = 4, resolution = "1920x1080") {
+  const response = await fetch("/api/generate_video", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt, duration, resolution }),
+  });
+  const data = await response.json();
+  return data.video_url;
+}
