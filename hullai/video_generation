@@ -1,17 +1,75 @@
-# Requires: torch, transformers, diffusers
+# Requires: torch, transformers, diffusers, opencv-python, moviepy, replicate
 import replicate
 import requests
+import cv2
+from moviepy.editor import VideoFileClip, concatenate_videoclips
 from IPFS_API import upload_to_ipfs  # Custom IPFS integration
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
 class VideoGenerator:
     def __init__(self):
-        self.model = "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b"
+        # Use a video-capable model (e.g., Stable Video Diffusion)
+        self.model = "stability-ai/stable-video-diffusion:3f0457e4619daac51203dedb472816fd4af51f3149fa7a9e0b5ffcf1b8172438"
+        replicate.Client(api_token=REPLICATE_API_TOKEN)
     
-    def generate_video(self, prompt):
-        output = replicate.run(
-            self.model,
-            input={"prompt": prompt, "num_frames": 24}
-        )
+    def generate_video(self, prompt, image_path=None, num_frames=24):
+        input_data = {"prompt": prompt, "num_frames": num_frames}
+        if image_path:
+            with open(image_path, "rb") as img:
+                input_data["image"] = img
+        output = replicate.run(self.model, input=input_data)
         video_url = output[0]
         video_ipfs_hash = upload_to_ipfs(video_url)
-        return video_ipfs_hash
+        return video_url, video_ipfs_hash
+    
+    def extract_last_frame(self, video_path, output_image):
+        cap = cv2.VideoCapture(video_path)
+        cap.set(cv2.CAP_PROP_POS_FRAMES, cap.get(cv2.CAP_PROP_FRAME_COUNT) - 1)
+        ret, frame = cap.read()
+        if ret:
+            cv2.imwrite(output_image, frame)
+        cap.release()
+        return output_image
+    
+    def merge_videos(self, video_paths, output_path):
+        clips = [VideoFileClip(vp) for vp in video_paths]
+        final_clip = concatenate_videoclips(clips, method="compose")
+        final_clip.write_videofile(output_path, codec="libx264")
+        final_clip.close()
+        return output_path
+
+if __name__ == "__main__":
+    generator = VideoGenerator()
+    initial_prompt = "A futuristic city at sunset with flying cars"
+    continuation_prompt = "Continue the futuristic city at sunset with flying cars moving toward a glowing skyline"
+    initial_video = "examples/initial_video.mp4"
+    last_frame = "examples/last_frame.png"
+    continuation_video = "examples/continuation_video.mp4"
+    output_video = "examples/extended_video.mp4"
+
+    # Generate initial video
+    video_url, ipfs_hash = generator.generate_video(initial_prompt)
+    response = requests.get(video_url)
+    with open(initial_video, "wb") as f:
+        f.write(response.content)
+    print(f"Initial video saved as {initial_video}, IPFS hash: {ipfs_hash}")
+
+    # Extract last frame
+    generator.extract_last_frame(initial_video, last_frame)
+    print(f"Last frame saved as {last_frame}")
+
+    # Generate continuation video
+    video_url, ipfs_hash = generator.generate_video(continuation_prompt, last_frame)
+    response = requests.get(video_url)
+    with open(continuation_video, "wb") as f:
+        f.write(response.content)
+    print(f"Continuation video saved as {continuation_video}, IPFS hash: {ipfs_hash}")
+
+    # Merge videos
+    generator.merge_videos([initial_video, continuation_video], output_video)
+    ipfs_hash = upload_to_ipfs(output_video)
+    print(f"Extended video saved as {output_video}, IPFS hash: {ipfs_hash}")
