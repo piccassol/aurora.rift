@@ -5,12 +5,12 @@ async function generateVideo(prompt, duration = 4, resolution = "1920x1080", ima
     formData.append("duration", duration);
     formData.append("resolution", resolution);
     if (image) {
-      formData.append("image", image); // Assumes API supports image input for continuation
+      formData.append("image", image); // Image for continuation
     }
 
     const response = await fetch("/api/generate_video", {
       method: "POST",
-      body: formData, // Use FormData to handle image uploads
+      body: formData,
     });
 
     if (!response.ok) {
@@ -19,7 +19,7 @@ async function generateVideo(prompt, duration = 4, resolution = "1920x1080", ima
 
     const data = await response.json();
     if (!data.video_url) {
-      throw new Error("No video URL returned from API");
+      throw new Error("No video URL returned");
     }
 
     return data.video_url;
@@ -29,22 +29,28 @@ async function generateVideo(prompt, duration = 4, resolution = "1920x1080", ima
   }
 }
 
-// Optional: Function to fetch and extract last frame (client-side, if needed)
 async function extractLastFrame(videoUrl) {
-  const video = document.createElement("video");
-  video.src = videoUrl;
-  await new Promise((resolve) => {
-    video.onloadedmetadata = () => {
-      video.currentTime = video.duration;
-    };
-    video.onseeked = () => resolve();
-  });
+  try {
+    const video = document.createElement("video");
+    video.src = videoUrl;
+    await new Promise((resolve) => {
+      video.onloadedmetadata = () => {
+        video.currentTime = video.duration;
+      };
+      video.onseeked = () => resolve();
+    });
 
-  const canvas = document.createElement("canvas");
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  canvas.getContext("2d").drawImage(video, 0, 0);
-  return canvas.toDataURL("image/png");
+    const canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0);
+    const dataUrl = canvas.toDataURL("image/png");
+    const response = await fetch(dataUrl);
+    return await response.blob();
+  } catch (error) {
+    console.error("Frame extraction failed:", error);
+    throw error;
+  }
 }
 
 export { generateVideo, extractLastFrame };
