@@ -139,7 +139,7 @@ solana program show --program-id <your_program_id>
 
 ## **🛠️ Join the Community**  
 
-💬 **Discord** – [[Join the community! :)](https://discord.gg/8r7afma9)]  
+💬 **Discord** – [[Join the community! :)]([https://discord.gg/8r7afma9](https://discord.com/invite/JZdxK4De)]  
 📢 **Twitter/X** – [[@aurorariftlabs](https://x.com/aurorariftlabs?s=21)]  
 
 
