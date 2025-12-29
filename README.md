@@ -33,20 +33,6 @@ AuroraRift is a **next-generation multi-agent system** designed to **automate cr
 
 ---
 
-## **🚀 News and Updates**  
-
-📌 **Join Us on Discord!** [[Discord Invite Link](https://discord.gg/8r7afma9)]  
-
-**2025.02.17 🎉** NolandAI now supports **automated trading/risk management** for safer trading strategies!  
-
-**2025.02.10 🔥** Beta launch of **MelissaAIR1**, the world's first AI **creative and always listening visual co-pilot**!  
-
-**2025.01.30 🎶** The **AuroraRift Marketplace** will soon be open for early adopters! Mint and list your AI-generated NFTs today.  
-
-**2025.01.25 🛠️** **Dexscreener integration is live!** Get real-time token analytics.  
-
----
-
 ## **📝 TODOs**  
 
 ✔ **Launch Music NFT demo with MICHÉLAI**  
