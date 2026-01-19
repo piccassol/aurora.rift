@@ -6,10 +6,9 @@ AuroraRift is a **next-generation multi-agent system** designed to **automate cr
 ![download (40)](https://github.com/user-attachments/assets/4e8ca2a0-6896-4109-897c-c0b7c3a669e4)
 
 ---
+## **The AI Agents of AuroraRift**  
 
-## ** The AI Agents of AuroraRift**  
-
-### ** Creativity Agents**  
+### **Creativity Agents**  
 - **MICHÉLAI** – AI-powered music composition, NFT minting, and royalty management.  
 - **HULLAI** – AI-powered video generation with NFT integration.  
 - **SAVASAI** – AI-driven image generation and art automation.  
